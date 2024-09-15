@@ -6,6 +6,7 @@ const DestinationsPage = () => {
     <div>
       <Head>
         <title>Destinations | The Travel Coach</title>
+        <meta name="description" content="Explore our featured destinations" />
       </Head>
       <DestinationList />
     </div>

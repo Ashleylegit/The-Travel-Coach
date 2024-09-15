@@ -13,13 +13,10 @@ const HomePage = () => {
     <div>
       <Head>
         <title>The Travel Coach</title>
+        <meta name="description" content="Expert travel advice and inspiration" />
       </Head>
-      <Header />
       <HeroSection />
       <FeaturedDestinations />
-      <Testimonials />
-      <CallToAction />
-      <Footer />
     </div>
   );
 };
