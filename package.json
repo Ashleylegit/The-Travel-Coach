@@ -6,4 +6,7 @@
     "mongodb": "^6.9.0",
     "mongoose": "^8.6.2"
   }
+  "scripts": {
+  "deploy": "gh-pages -d build"
+  }
 }
