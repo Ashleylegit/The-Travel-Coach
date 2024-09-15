@@ -1,3 +1,4 @@
+import Footer from '../components/Footer';
 const Footer = () => {
     return (
       <footer>
