@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const FeaturedDestinations = () => {
+const DestinationList = () => {
   const [destinations, setDestinations] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const FeaturedDestinations = () => {
   }, []);
 
   return (
-    <section className="featured-destinations">
+    <section className="destination-list">
       {destinations.map(destination => (
         <div key={destination.id}>
           <h2>{destination.name}</h2>
@@ -26,4 +26,4 @@ const FeaturedDestinations = () => {
   );
 };
 
-export default FeaturedDestinations;
+export default DestinationList;

@@ -1,3 +1,4 @@
+import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
@@ -10,7 +11,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-export default async function handler(req, res) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { name, email, message } = req.body;
     const mailOptions = {
