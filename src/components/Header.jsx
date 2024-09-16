@@ -1,7 +1,6 @@
-import Header from '../components/Header';
 import Link from 'next/link';
 
-const Header = () => {
+function Header() {
   return (
     <header>
       <nav>
@@ -12,14 +11,24 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/about">
-              <a>About</a>
+            <Link href="/DestionationGuide">
+              <a>Destination Guide</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/TravelPlanning">
+              <a>Travel Planning</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/CommunityForum">
+              <a>Community Forum</a>
             </Link>
           </li>
         </ul>
       </nav>
     </header>
   );
-};
+}
 
 export default Header;

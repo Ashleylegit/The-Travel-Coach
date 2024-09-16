@@ -1,16 +1,14 @@
 import Head from 'next/head';
-import DestinationList from '../components/DestinationList';
 
-const DestinationsPage = () => {
+function DestinationGuide() {
   return (
-    <div>
+    <>
       <Head>
-        <title>Destinations | The Travel Coach</title>
-        <meta name="description" content="Explore our featured destinations" />
+        <title>The Travel Coach - Destination Guide</title>
       </Head>
-      <DestinationList />
-    </div>
+      <h1>Destination Guide</h1>
+    </>
   );
-};
+}
 
-export default DestinationsPage;
+export default DestinationGuide;

@@ -8,17 +8,15 @@ import Footer from '../components/Footer';
 import '../styles/globals.css';
 import '../components/HeroSection.css';
 
-const HomePage = () => {
+function HomePage() {
   return (
-    <div>
+    <>
       <Head>
-        <title>The Travel Coach</title>
-        <meta name="description" content="Expert travel advice and inspiration" />
+        <title>Home - The Travel Coach</title>
       </Head>
-      <HeroSection />
-      <FeaturedDestinations />
-    </div>
+      <h1>Welcome to The Travel Coach</h1>
+    </>
   );
-};
+}
 
 export default HomePage;

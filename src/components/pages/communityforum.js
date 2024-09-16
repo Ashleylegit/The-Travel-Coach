@@ -1,16 +1,14 @@
 import Head from 'next/head';
-import Testimonials from '../components/Testimonials';
 
-const TestimonialsPage = () => {
+function CommunityForum() {
   return (
-    <div>
+    <>
       <Head>
-        <title>Community Forum | The Travel Coach</title>
-        <meta name="description" content="Read what our clients say about us" />
+        <title>The Travel Coach - Community Forum</title>
       </Head>
-      <Testimonials />
-    </div>
+      <h1>Community Forum</h1>
+    </>
   );
-};
+}
 
-export default TestimonialsPage;
+export default CommunityForum;
