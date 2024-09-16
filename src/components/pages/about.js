@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Header from '../components/Header';
-import AboutContent from '../components/AboutContent';
+import AboutContent from '../../../components/AboutContent';
 import Footer from '../components/Footer';
 
 const AboutPage = () => {

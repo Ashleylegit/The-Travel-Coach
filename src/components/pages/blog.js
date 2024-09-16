@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Header from '../components/Header';
-import BlogPosts from '../components/BlogPosts';
+import BlogPosts from '../../../components/BlogPosts';
 import Footer from '../components/Footer';
 
 const BlogPage = () => {

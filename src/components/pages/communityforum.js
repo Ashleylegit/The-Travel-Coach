@@ -5,7 +5,7 @@ const TestimonialsPage = () => {
   return (
     <div>
       <Head>
-        <title>Testimonials | The Travel Coach</title>
+        <title>Community Forum | The Travel Coach</title>
         <meta name="description" content="Read what our clients say about us" />
       </Head>
       <Testimonials />
