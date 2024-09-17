@@ -8,4 +8,14 @@ module.exports = {
     env: {
       MONGO_URI: process.env.MONGO_URI,
     },
-  };
+    trailingSlash: true,
+    basePath: '',
+    async rewrites() {
+    return [
+      {
+        source: '/',
+        destination: '/home',
+      },
+    ];
+  },
+};
