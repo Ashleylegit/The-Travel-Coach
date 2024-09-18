@@ -1,21 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+    }
 
 export default nextConfig;
-
-module.exports = {
-    //... existing config
-    env: {
-      MONGO_URI: process.env.MONGO_URI,
-    },
-    trailingSlash: true,
-    basePath: '',
-    async rewrites() {
-    return [
-      {
-        source: '/',
-        destination: '/home',
-      },
-    ];
-  },
-};
