@@ -1,37 +1,40 @@
 import React from 'react';
 import './styles/main.css';
 import Router from './routes';
+import { AuthProvider } from './auth';
 
 const Page = () => {
   return (
-    <html lang="en">
-      <head>
-        {/* Meta tags */}
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        
-        {/* Link tags */}
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        
-        {/* Style tags */}
-        <style data-url="styles/main.css"></style>
-      </head>
-      <body>
-        <Router />
-        {/* Main content */}
-        <div className="site-container">
-          {/* Header */}
-          <Header />
+    <AuthProvider>
+      <html lang="en">
+        <head>
+          {/* Meta tags */}
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           
-          {/* Pages */}
-          <Pages />
+          {/* Link tags */}
+          <link rel="icon" href="favicon.ico" type="image/x-icon" />
           
-          {/* Footer */}
-          <Footer />
-        </div>
-      </body>
-    </html>
+          {/* Style tags */}
+          <style data-url="styles/main.css"></style>
+        </head>
+        <body>
+          <Router />
+          {/* Main content */}
+          <div className="site-container">
+            {/* Header */}
+            <Header />
+            
+            {/* Pages */}
+            <Pages />
+            
+            {/* Footer */}
+            <Footer />
+          </div>
+        </body>
+      </html>
+    </AuthProvider>
   );
 };
 
