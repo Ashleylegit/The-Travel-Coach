@@ -1,14 +1,16 @@
-import Head from 'next/head';
+import React from 'react';
 
-function TravelPlanning() {
+const TravelPlanning = () => {
   return (
-    <>
-      <Head>
-        <title>The Travel Coach - Travel Planning</title>
-      </Head>
+    <div>
       <h1>Travel Planning</h1>
-    </>
+      <ul>
+        <li>Personalized travel planning</li>
+        <li>Expert travel advice</li>
+        <li>Customized itineraries</li>
+      </ul>
+    </div>
   );
-}
+};
 
 export default TravelPlanning;

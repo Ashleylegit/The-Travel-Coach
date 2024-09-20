@@ -1,14 +1,12 @@
-import Head from 'next/head';
+import React from 'react';
 
-function CommunityForum() {
+const CommunityForum = () => {
   return (
-    <>
-      <Head>
-        <title>The Travel Coach - Community Forum</title>
-      </Head>
-      <h1>Community Forum</h1>
-    </>
+    <div>
+      <h1>About Us</h1>
+      <p>Learn more about our team and mission</p>
+    </div>
   );
-}
+};
 
 export default CommunityForum;
