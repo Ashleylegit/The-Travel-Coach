@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
@@ -17,8 +17,13 @@ const ForgotPassword = () => {
       });
       const data = await response.json();
       setMessage(data.message);
-    } catch (error) {
-      setError(error.message);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        console.error('Unknown error:', error);
+        setError('An unknown error occurred.');
+      }
     }
   };
 

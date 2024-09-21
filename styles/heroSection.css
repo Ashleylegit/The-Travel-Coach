@@ -1,0 +1,25 @@
+.hero-section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Mobile */
+  @media only screen and (max-width: 768px) {
+    .hero-section {
+      height: 50vh;
+    }
+    .hero-content {
+      padding: 2rem;
+    }
+  }
+  

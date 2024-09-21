@@ -1,19 +1,15 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import React from 'react';
 
-const HeroSection = () => {
-  return (
-    <section className="hero-section">
-      <Image src="/hero-image.jpg" alt="Hero Image" width={1920} height={1080} />
-      <div className="hero-content">
-        <h1>Welcome to The Travel Coach</h1>
-        <p>Expert travel advice and inspiration</p>
-        <Link href="/destinations">
-          <a>Explore Destinations</a>
-        </Link>
-      </div>
-    </section>
-  );
-};
+const HeroSection = ({ title, subtitle, backgroundImage }) => (
+  <section
+    className="hero-section"
+    style={{ backgroundImage: `url(${backgroundImage})` }}
+  >
+    <div className="hero-content">
+      <h1>{title}</h1>
+      <p>{subtitle}</p>
+    </div>
+  </section>
+);
 
 export default HeroSection;

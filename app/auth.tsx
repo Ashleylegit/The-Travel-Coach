@@ -2,17 +2,17 @@
 
 import React, { createContext, useState } from 'react';
 
-interface AuthContext {
+interface AuthContextType {
   isLoggedIn: boolean;
   user: any;
-  login: (user: any) => void;
+  login: (email: string, password: string) => Promise<any>;
   logout: () => void;
 }
 
-const AuthContext = createContext<AuthContext>({
+const AuthContext = createContext<AuthContextType>({
   isLoggedIn: false,
   user: null,
-  login: () => {},
+  login: () => Promise.resolve(),
   logout: () => {},
 });
 

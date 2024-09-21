@@ -6,7 +6,7 @@ const ResetPassword = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [token, setToken] = useState('');
   const [message, setMessage] = useState('');
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
@@ -24,7 +24,7 @@ const ResetPassword = () => {
       });
       const data = await response.json();
       setMessage(data.message);
-    } catch (error) {
+    } catch (error: any) {
       setError(error.message);
     }
   };

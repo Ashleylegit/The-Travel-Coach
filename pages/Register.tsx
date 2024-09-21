@@ -15,7 +15,7 @@ const Register = () => {
       return;
     }
     // Call API to register user
-    login({ username, email, password });
+    login(username, password);
   };
 
   return (

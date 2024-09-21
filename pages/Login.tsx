@@ -8,7 +8,7 @@ const Login = () => {
     event.preventDefault();
     const username = event.target.username.value;
     const password = event.target.password.value;
-    login({ username, password });
+    login(username, password);
   };
 
   return (
