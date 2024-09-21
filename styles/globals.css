@@ -162,3 +162,39 @@ input[type="submit"] {
     font-size: 20px;
   }
 }
+
+/* Typography */
+body {
+  font-family: Open Sans, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Colors */
+primary-color: #3498db;
+secondary-color: #f1c40f;
+
+/* Spacing */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Mobile styles */
+}
+
+@media only screen and (max-width: 1024px) {
+  /* Tablet styles */
+}
+
+@media only screen and (min-width: 1025px) {
+  /* Desktop styles */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

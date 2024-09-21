@@ -1,24 +1,15 @@
-// pages/index.js
-import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
-import Card from '../components/Card';
-import Footer from '../components/Footer';
+import Services from '../components/Services';
+import Testimonials from '../components/Testimonials';
 
-const HomePage = () => (
-  <div>
-    <Navbar />
-    <HeroSection
-      title="Welcome to The Travel Coach"
-      subtitle="Your partner in travel"
-      backgroundImage="/images/hero.jpg"
-    />
-    <Card
-      title="Destination 1"
-      description="Description 1"
-      image="/images/destination1.jpg"
-    />
-    <Footer />
-  </div>
-);
+function HomePage() {
+  return (
+    <div>
+      <HeroSection />
+      <Services />
+      <Testimonials />
+    </div>
+  );
+}
 
 export default HomePage;

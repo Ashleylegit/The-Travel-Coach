@@ -1,14 +1,16 @@
 // pages/_app.js
-import { AppProps } from 'next/app';
 import Head from 'next/head';
-import Header from '../components/Header';
+import Header from '../components/Navbar';
 import Footer from '../components/Footer';
 
-function MyApp({ Component, pageProps }, AppProps) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
         <title>The Travel Coach</title>
+        <meta name="description" content="Travel planning made easy" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="keywords" content="travel, planning, coach" />
       </Head>
       <Header />
       <Component {...pageProps} />
