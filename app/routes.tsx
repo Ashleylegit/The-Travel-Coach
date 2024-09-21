@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import DestinationGuide from './pages/DestinationGuide';
-import TravelPlanning from './pages/TravelPlanning';
-import CommunityForum from './pages/CommunityForum';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import ForgotPassword from './pages/ForgotPassword';
-import ResetPassword from './pages/ResetPassword';
+import Home from '../pages/Home';
+import DestinationGuide from '../pages/DestinationGuide';
+import TravelPlanning from '../pages/TravelPlanning';
+import CommunityForum from '../pages/CommunityForum';
+import Login from '../pages/Login';
+import Register from '../pages/Register';
+import ForgotPassword from '../pages/ForgotPassword';
+import ResetPassword from '../pages/ResetPassword';
 import ProtectedRoute from './ProtectedRoute';
 
 const Router = () => {
