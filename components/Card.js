@@ -1,11 +1,9 @@
-const Card = ({ title, description, image }) => (
-  <div className="card">
-  <img src={image} alt={title} />
-  <div className="card-content">
-    <h2>{title}</h2>
-    <p>{description}</p>
-  </div>
-</div>
+function Card({ children }) {
+  return (
+    <div className="bg-white shadow-md rounded p-4 md:p-6 lg:p-8">
+      {children}
+    </div>
   );
-  
-  export default Card;
+}
+
+export default Card;
