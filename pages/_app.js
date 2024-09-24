@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Header />
       <Component {...pageProps} />
+      <NextSeo {...seoConfig} />
       <Footer />
     </>
   );

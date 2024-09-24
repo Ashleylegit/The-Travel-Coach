@@ -1,3 +1,13 @@
 import Image from 'next/image';
 
-<Image src="/image.jpg" alt="Image" width={1920} height={1080} />
+function MyImage() {
+  return (
+    <Image
+      src="/image.jpg"
+      alt="My Image"
+      width={400}
+      height={300}
+      layout="responsive"
+    />
+  );
+}
