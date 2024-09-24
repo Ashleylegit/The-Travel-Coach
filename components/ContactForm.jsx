@@ -1,69 +1,30 @@
-import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
-const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+function ContactForm() {
+  const { register, handleSubmit, errors } = useForm();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-      const data = await response.json();
-      console.log(data);
-      setFormData({
-        name: '',
-        email: '',
-        message: '',
-      });
-    } catch (error) {
-      console.error(error);
-    }
+  const onSubmit = async (data) => {
+    // Handle form submission
+    console.log(data);
   };
 
   return (
-    <section className="contact-form">
-      <h2>Get in Touch</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input
-            type="text"
-            value={formData.name}
-            onChange={(e) =>
-              setFormData({ ...formData, name: e.target.value })
-            }
-          />
-        </label>
-        <label>
-          Email:
-          <input
-            type="email"
-            value={formData.email}
-            onChange={(e) =>
-              setFormData({ ...formData, email: e.target.value })
-            }
-          />
-        </label>
-        <label>
-          Message:
-          <textarea
-            value={formData.message}
-            onChange={(e) =>
-              setFormData({ ...formData, message: e.target.value })
-            }
-          />
-        </label>
-        <button type="submit">Send</button>
-      </form>
-    </section>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <label>Name:</label>
+      <input type="text" {...register('name')} />
+      {errors.name && <div>This field is required</div>}
+
+      <label>Email:</label>
+      <input type="email" {...register('email')} />
+      {errors.email && <div>This field is required</div>}
+
+      <label>Message:</label>
+      <textarea {...register('message')} />
+      {errors.message && <div>This field is required</div>}
+
+      <button type="submit">Send Message</button>
+    </form>
   );
-};
+}
 
 export default ContactForm;
