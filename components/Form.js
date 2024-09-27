@@ -1,32 +1,30 @@
-import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import { motion } from 'framer-motion';
 
-const Form = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+const MyForm = () => {
+  const { register, handleSubmit, errors } = useForm();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Form submission logic
+  const onSubmit = (data) => {
+    console.log(data);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name:
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-      </label>
-      <label>
-        Email:
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      </label>
-      <label>
-        Message:
-        <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
-      </label>
-      <Button>Submit</Button>
-    </form>
+    <Form onSubmit={handleSubmit(onSubmit)}>
+      <Form.Group controlId="name">
+        <Form.Label>Name</Form.Label>
+        <Form.Control type="text" {...register('name')} />
+      </Form.Group>
+
+      <Form.Group controlId="email">
+        <Form.Label>Email</Form.Label>
+        <Form.Control type="email" {...register('email')} />
+      </Form.Group>
+
+      <Button type="submit">Submit</Button>
+    </Form>
   );
 };
 
-export default Form;
+export default MyForm;

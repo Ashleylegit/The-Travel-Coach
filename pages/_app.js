@@ -1,25 +1,27 @@
 // pages/_app.js
 import Head from 'next/head';
 import Header from '../components/Navbar';
-import Footer from '../components/Footer';
 import Layout from '../components/Layout';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
+import MainContent from '../components/MainContent';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <Layout>
-        <Head>
+    <div>
+      <Head>
         <title>The Travel Coach</title>
-        <meta name="description" content="Travel planning made easy" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="keywords" content="travel, planning, coach" />
+        <meta name="description" content="Travel coaching services" />
+        <meta name="keywords" content="travel, coaching, adventure" />
       </Head>
       <Header />
-      <Component {...pageProps} />
-      </Layout>
-      <NextSeo {...seoConfig} />
+      <Navigation />
+      <MainContent>
+        <Component {...pageProps} />
+      </MainContent>
       <Footer />
-    </>
+    </div>
   );
 }
 

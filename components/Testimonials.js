@@ -1,4 +1,5 @@
 import Carousel from 'react-multi-carousel';
+import { motion } from 'framer-motion';
 
 const Testimonials = () => {
   return (

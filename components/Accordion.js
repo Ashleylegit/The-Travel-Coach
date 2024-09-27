@@ -1,22 +1,27 @@
-import Accordion from 'react-accordion';
+import { Accordion, Card } from 'react-bootstrap';
 
-function MyAccordion() {
+const MyAccordion = () => {
   return (
-    <Accordion>
-      <Accordion.Item>
-        <Accordion.Button>Section 1</Accordion.Button>
-        <Accordion.Panel>
-          <p>This is the content of section 1.</p>
-        </Accordion.Panel>
-      </Accordion.Item>
-      <Accordion.Item>
-        <Accordion.Button>Section 2</Accordion.Button>
-        <Accordion.Panel>
-          <p>This is the content of section 2.</p>
-        </Accordion.Panel>
-      </Accordion.Item>
+    <Accordion defaultActiveKey="0">
+      <Card>
+        <Accordion.Toggle as={Card.Header} eventKey="0">
+          Section 1
+        </Accordion.Toggle>
+        <Accordion.Collapse eventKey="0">
+          <Card.Body>Content for section 1</Card.Body>
+        </Accordion.Collapse>
+      </Card>
+
+      <Card>
+        <Accordion.Toggle as={Card.Header} eventKey="1">
+          Section 2
+        </Accordion.Toggle>
+        <Accordion.Collapse eventKey="1">
+          <Card.Body>Content for section 2</Card.Body>
+        </Accordion.Collapse>
+      </Card>
     </Accordion>
   );
-}
+};
 
 export default MyAccordion;

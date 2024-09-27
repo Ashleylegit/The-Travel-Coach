@@ -1,16 +1,20 @@
-import { TabPane, Tabs } from 'react-tabs';
+import { Tab, Tabs } from 'react-bootstrap';
+import { motion } from 'framer-motion';
 
-function MyTabs() {
+const MyTabs = () => {
   return (
-    <Tabs>
-      <TabPane label='Tab 1'>
-        <p>This is the content of tab 1.</p>
-      </TabPane>
-      <TabPane label='Tab 2'>
-        <p>This is the content of tab 2.</p>
-      </TabPane>
+    <Tabs defaultActiveKey="home">
+      <Tab eventKey="home" title="Home">
+        <h3>Home Content</h3>
+      </Tab>
+      <Tab eventKey="profile" title="Profile">
+        <h3>Profile Content</h3>
+      </Tab>
+      <Tab eventKey="contact" title="Contact">
+        <h3>Contact Content</h3>
+      </Tab>
     </Tabs>
   );
-}
+};
 
 export default MyTabs;

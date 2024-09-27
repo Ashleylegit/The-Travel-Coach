@@ -1,13 +1,13 @@
 import Image from 'next/image';
 
-function MyImage() {
+const MyImage = () => {
   return (
     <Image
       src="/image.jpg"
-      alt="My Image"
       width={400}
       height={300}
-      layout="responsive"
+      alt="My image"
+      quality={75}
     />
   );
-}
+};
