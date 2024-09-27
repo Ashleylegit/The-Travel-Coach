@@ -319,3 +319,51 @@ secondary-color: #f1c40f;
     padding: 60px;
   }
 }
+
+/* globals.css */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #f1c40f;
+  --font-family: Arial, sans-serif;
+  --font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--primary-color);
+}
+
+/* components/Form.css */
+.form-control {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+/* globals.css */
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    padding: 20px;
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 769px) {
+  body {
+    font-size: 16px;
+  }
+  .container {
+    padding: 40px;
+  }
+}

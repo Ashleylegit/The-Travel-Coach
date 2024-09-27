@@ -2,11 +2,13 @@
 import Head from 'next/head';
 import Header from '../components/Navbar';
 import Footer from '../components/Footer';
+import Layout from '../components/Layout';
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head>
+      <Layout>
+        <Head>
         <title>The Travel Coach</title>
         <meta name="description" content="Travel planning made easy" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -14,6 +16,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Header />
       <Component {...pageProps} />
+      </Layout>
       <NextSeo {...seoConfig} />
       <Footer />
     </>
