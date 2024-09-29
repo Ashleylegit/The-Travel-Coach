@@ -112,6 +112,7 @@
     "styled-jsx": "^5.1.1",
     "tailwindcss": "^3.4.12",
     "tar": "^6.2.1",
+    "tinypng": "^0.1.1",
     "tr46": "^4.1.1",
     "tslib": "^2.7.0",
     "util-deprecate": "^1.0.2",
