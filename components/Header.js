@@ -1,15 +1,13 @@
 import styles from './Header.module.css';
-import { motion } from 'framer-motion';
+import Link from 'next/link';
 
-const Header = () => {
+function Header() {
   return (
     <header className={styles.header}>
       <nav>
         <ul>
           <li>
-            <Link href="/">
-              <a>The Travel Coach</a>
-            </Link>
+            <Link href="/MainContent">The Travel Coach</Link>          
           </li>
           <li>
             <Link href="/about">
@@ -25,6 +23,6 @@ const Header = () => {
       </nav>
     </header>
   );
-};
+}
 
 export default Header;

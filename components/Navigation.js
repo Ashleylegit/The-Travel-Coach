@@ -1,7 +1,6 @@
 import styles from './Navigation.module.css';
-import { motion } from 'framer-motion';
 
-const Navigation = () => {
+function Navigation() {
   return (
     <nav className={styles.nav}>
       <ul>
@@ -23,6 +22,6 @@ const Navigation = () => {
       </ul>
     </nav>
   );
-};
+}
 
 export default Navigation;
