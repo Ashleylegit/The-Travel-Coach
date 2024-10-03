@@ -5,17 +5,17 @@ function Navigation() {
     <nav className={styles.nav}>
       <ul>
         <li>
-          <Link href="/">
+          <Link href="/pages/index">
             <a>Home</a>
           </Link>
         </li>
         <li>
-          <Link href="/about">
+          <Link href="/pages/about">
             <a>About</a>
           </Link>
         </li>
         <li>
-          <Link href="/contact">
+          <Link href="/pages/contact">
             <a>Contact</a>
           </Link>
         </li>

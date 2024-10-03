@@ -1,23 +1,15 @@
 'use client';
 
 import React, { createContext, useState } from 'react';
+import { AuthContextType } from './AuthContextType';
+  const AuthContext = createContext<AuthContextType>({
+    isLoggedIn: false,
+    user: null,
+    login: () => Promise.reject(new Error('Not implemented')),
+    logout: () => {}
+  });
 
-interface AuthContextType {
-  isLoggedIn: boolean;
-  user: any;
-  login: (email: string, password: string) => Promise<any>;
-  logout: () => void;
-}
-
-const AuthContext = createContext<AuthContextType>({
-  isLoggedIn: false,
-  user: null,
-  login: () => Promise.resolve(),
-  logout: () => {},
-});
-
-const AuthProvider = ({ children }: any) => {
-  const [user, setUser] = useState(null);
+  const AuthProvider = ({ children }: { children: React.ReactNode }) => {  const [user, setUser] = useState<string | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const login = async (email: string, password: string) => {
@@ -41,7 +33,7 @@ const AuthProvider = ({ children }: any) => {
     setIsLoggedIn(false);
   };
 
-  const register = async (email: string, password: string) => {
+  const _register = async (email: string, password: string) => {
     try {
       const response = await fetch('/api/register', {
         method: 'POST',
@@ -57,7 +49,7 @@ const AuthProvider = ({ children }: any) => {
     }
   };
 
-  const forgotPassword = async (email: string) => {
+  const _forgotPassword = async (email: string) => {
     try {
       const response = await fetch('/api/forgot-password', {
         method: 'POST',
@@ -73,7 +65,7 @@ const AuthProvider = ({ children }: any) => {
     }
   };
 
-  const resetPassword = async (password: string, token: string) => {
+  const _resetPassword = async (password: string, token: string) => {
     try {
       const response = await fetch(`/api/reset-password/${token}`, {
         method: 'POST',
@@ -95,5 +87,4 @@ const AuthProvider = ({ children }: any) => {
     </AuthContext.Provider>
   );
 };
-
 export { AuthContext, AuthProvider };

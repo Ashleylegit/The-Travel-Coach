@@ -50,19 +50,19 @@ const Testimonials = () => {
       >
         <div className="testimonial">
           <p>
-            "The Travel Coach helped us plan an unforgettable trip to Europe!"
+            The Travel Coach helped us plan an unforgettable trip to Europe!
           </p>
           <h4>John Doe</h4>
         </div>
         <div className="testimonial">
           <p>
-            "Their expert guidance made our honeymoon dreams come true!"
+            Their expert guidance made our honeymoon dreams come true!
           </p>
           <h4>Jane Smith</h4>
         </div>
         <div className="testimonial">
           <p>
-            "We couldn't have asked for a smoother travel experience!"
+            We couldn't have asked for a smoother travel experience!
           </p>
           <h4>Bob Johnson</h4>
         </div>
