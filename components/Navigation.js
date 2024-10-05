@@ -3,7 +3,7 @@ import styles from './Navigation.module.css';
 function Navigation() {
   return (
     <nav className={styles.nav}>
-      <ul>
+{/*       <ul>
         <li>
           <Link href="/pages/index">
             <a>Home</a>
@@ -19,7 +19,7 @@ function Navigation() {
             <a>Contact</a>
           </Link>
         </li>
-      </ul>
+      </ul> */}
     </nav>
   );
 }

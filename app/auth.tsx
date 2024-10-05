@@ -33,7 +33,7 @@ import { AuthContextType } from './AuthContextType';
     setIsLoggedIn(false);
   };
 
-  const _register = async (email: string, password: string) => {
+/*   const _register = async (email: string, password: string) => {
     try {
       const response = await fetch('/api/register', {
         method: 'POST',
@@ -80,7 +80,7 @@ import { AuthContextType } from './AuthContextType';
       console.error(error);
     }
   };
-
+ */
   return (
     <AuthContext.Provider value={{ isLoggedIn, user, login, logout }}>
       {children}

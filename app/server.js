@@ -1,4 +1,4 @@
-const express = require('express');
+/* const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
@@ -76,3 +76,4 @@ const authRoutes = require('./routes/auth');
 // ... other imports
 
 app.use('/api', authRoutes);
+ */

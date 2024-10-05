@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+/* import React, { useContext, useState } from 'react';
 import { AuthContext } from '../app/auth';
 
 const Register = () => {
@@ -57,3 +57,4 @@ const Register = () => {
 };
 
 export default Register;
+ */

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/* import React, { useState } from 'react';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
@@ -47,3 +47,4 @@ const ForgotPassword = () => {
 };
 
 export default ForgotPassword;
+ */

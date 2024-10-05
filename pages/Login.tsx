@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+/* import React, { useContext } from 'react';
 import { AuthContext } from '../app/auth';
 
 const Login = () => {
@@ -24,3 +24,4 @@ const Login = () => {
 };
 
 export default Login;
+ */

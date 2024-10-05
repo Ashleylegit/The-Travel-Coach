@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+/* import React, { useContext } from 'react';
 import { AuthContext } from './auth';
 import { Navigate } from 'react-router-dom';
 
@@ -13,3 +13,4 @@ const ProtectedRoute = ({ children }: any) => {
 };
 
 export default ProtectedRoute;
+ */

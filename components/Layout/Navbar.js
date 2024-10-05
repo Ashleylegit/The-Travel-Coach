@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 function Navbar() {
   const router = useRouter();
@@ -10,7 +11,12 @@ function Navbar() {
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/">
           <a>
-            <img src="/logo.png" alt="Logo" className="h-8" />
+          <Image
+            src="/path/to/your/logo.png"
+            alt="Travel Coach Logo"
+            width={150}  // Adjust this value to match your logo's dimensions
+            height={50}  // Adjust this value to match your logo's dimensions
+          />
           </a>
         </Link>
         <ul className="flex items-center space-x-4">
@@ -41,3 +47,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
+

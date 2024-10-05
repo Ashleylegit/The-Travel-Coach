@@ -1,4 +1,4 @@
-'use client';
+/* 'use client';
 import React, { useState } from 'react';
 
 const ResetPassword = () => {
@@ -62,3 +62,4 @@ const ResetPassword = () => {
 };
 
 export default ResetPassword;
+ */
